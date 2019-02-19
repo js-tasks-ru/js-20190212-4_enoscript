@@ -5,4 +5,11 @@
  * @returns {number}
  */
 function sum (m, n) {
+    if ((!m || !n) || isNaN(m) || isNaN(n)) {
+        return 'Вы ввели неверные параметры';
+    } else {
+        return m + n;
+    }
 }
+
+console.log(sum(1, 2));
