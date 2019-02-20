@@ -4,5 +4,6 @@
  * @param {*} value - значение, которе ищем
  * @returns {Object}
  */
-function find (obj, value) {
+function find(obj, value) {
+
 }
