@@ -6,18 +6,16 @@
  * @returns {{min:number, max:number}}  объект
  */
 function getMinMax(str) {
-    str = str.replace(/,/g, ' ');
-    const arrayStr = str.split(' ');
-    const arrayNumber = [];
-    let min = 0, max = 0;
+    str = str.replace(/,|;/g, ' ');
+    let arrayStr = str.split(' ');
+
     for (let i = 0; i < arrayStr.length; i++) {
-        arrayStr[i] = +arrayStr[i];
-        if (arrayStr[i]) {
-            arrayNumber.push(arrayStr[i])
-        }
+        arrayStr[i] = +arrayStr[i] ? +arrayStr[i] : 0;
     }
-    for (let i = 0; i < arrayNumber.length; i++) {
-        (arrayNumber[i] < arrayNumber[i + 1]) ? (min = arrayNumber[i] < min ? arrayNumber[i] : min) : (max = arrayNumber[i] > max ? arrayNumber[i] : max);
-    }
-    return {min, max};
+
+    arrayStr.sort((a, b) => {
+        return a - b;
+    });
+
+    return {min: +arrayStr[0], max: +arrayStr[arrayStr.length - 1]};
 }
