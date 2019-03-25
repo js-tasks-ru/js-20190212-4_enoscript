@@ -1,3 +1,68 @@
-td {
-    border: 1px solid black;
+@import url("https://fonts.googleapis.com/css?family=Space+Mono:400,700");
+body {
+    background-color: #232323;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+}
+.example,
+.result {
+    max-width: 340px;
+    margin: 0 auto;
+}
+.example .example__title {
+    font-size: 14px;
+    text-align: center;
+}
+.result .result__title {
+    font-size: 18px;
+    text-align: center;
+}
+.result .result__button {
+    width: 48%;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    background: none;
+    border: 1px solid;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.result .result__button:focus,
+.result .result__button:active {
+    outline: none;
+}
+.result .result__button.result__button--blue {
+    border-color: #1E88E5;
+    color: #1E88E5;
+}
+.result .result__button.result__button--blue:hover {
+    background-color: #1E88E5;
+    color: #fff;
+}
+.result .result__button.result__button--purple {
+    border-color: #C099EF;
+    color: #C099EF;
+}
+.result .result__button.result__button--purple:hover {
+    background-color: #C099EF;
+    color: #fff;
+}
+table {
+    width: 100%;
+    text-align: left;
+    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    border-collapse: collapse;
+}
+table thead td {
+    background-color: #EF9A9A;
+    color: #fff;
+}
+table th, table td {
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+table tr:last-child th, table tr:last-child td {
+    border-bottom: none;
 }

@@ -7,8 +7,9 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <h1>Пример минимально необходимой структуры таблицы для прохождения тестов</h1>
+
     <div class="example">
+        <h4 class="example__title">An example of the minimum required table structure for passing tests</h4>
         <table>
             <thead>
                 <tr>
@@ -30,9 +31,12 @@
         </table>
     </div>
 
-    <h1>Результат</h1>
-    <div class="result">
 
+
+    <div class="result">
+        <h2 class="result__title">Result</h2>
+        <button class="result__button result__button--blue" onclick="table.sort(0)">By Name</button>
+        <button class="result__button result__button--purple" onclick="table.sort(2)">By Salary</button>
     </div>
 
     <script>
@@ -67,10 +71,8 @@
 
         let table = new SortableTable(rows);
         document.querySelector('.result').appendChild(table.el);
-
     </script>
 
-    <button onclick="table.sort(0)">По имени</button>
-    <button onclick="table.sort(2)">По зарплате</button>
+
 </body>
 </html>
