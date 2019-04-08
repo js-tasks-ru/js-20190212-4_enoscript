@@ -11,11 +11,13 @@
 
     <div class="wrapper">
         <span class="left_top" data-tooltip="Привет мир">Верх</span>
-        <span class="left_bottom" data-tooltip="Привет мир" style="position: fixed; bottom: 0; left: 0">Низ</span>
+        <span class="left_bottom" data-tooltip="Привет мир 2" style="position: fixed; bottom: 0; left: 0">Низ</span>
     </div>
     <script>
         let tooltip = new Tooltip();
         tooltip.attach(document.body);
+
+        tooltip.detach();
     </script>
 
 </body>
