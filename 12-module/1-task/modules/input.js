@@ -1,13 +1,9 @@
-(function () {
+import { Block } from "./block";
 
-    class Input extends window.Block {
-
-        get name() {
-            return 'input';
-        }
-
-        setValue() {}
+export class Input extends Block {
+    get name() {
+        return 'input';
     }
 
-    window.Input = Input;
-})();
+    setValue() {}
+}
